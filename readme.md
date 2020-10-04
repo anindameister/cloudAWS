@@ -57,6 +57,22 @@ ec2-54-88-137-51.compute-1.amazonaws.com
 # project
 ###### lab3
 
+- config [[1]](#1).
+- before: config file
+
+![config](https://github.com/anindameister/cloudAWS/blob/main/snaps/4.PNG)
+
+- after: config file
+- we want the output in table format
+
+![config](https://github.com/anindameister/cloudAWS/blob/main/snaps/5.PNG)
+
+- the below is done in anaconda, by just start-anaconda, did the below thing in the default directory. library has been gotten, and boto3 has been imported siccessfully without error
+```
+ pip install boto3
+```
+
+![pip install boto3](https://github.com/anindameister/cloudAWS/blob/main/snaps/6.PNG)
 
 
 ## References
