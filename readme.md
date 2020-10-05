@@ -87,7 +87,14 @@ ec2-54-88-137-51.compute-1.amazonaws.com
 - let's say that you have two types of docs: - images and pdfs. So we can create two buckets, one of which could containn all images and other one, all pdfs and non-image docs
 - you can also put all the docs in a simgle bucket as well, but for simplicity we can keep docs separately in regards to category
 - we can create bucket using the console, or cli, or boto3 python package
+- before we get into that, we got to make sure that our credentials are perfectly in sync with the Aws', recall the problems
+- gettingTheCurrentCredentials [[5]](#5).
 
+![gettingTheCurrentCredentials](https://github.com/anindameister/cloudAWS/blob/main/snaps/9.PNG)
+
+- boto3 way from laptop to create a bucket [[4]](#4).
+
+![boto3 way from laptop to create a bucket](https://github.com/anindameister/cloudAWS/blob/main/snaps/8.PNG)
 
 ## References
 <a id="1">[1]</a> 
@@ -99,6 +106,10 @@ https://youtu.be/qsPZL-0OIJg
 <a id="3">[3]</a> 
 file:///H:/security/clone/security/C2,WI-SSI-en.pdf
 
+<a id="4">[4]</a> 
+C:\aws\boto3WayFromLaptopToCreateAbucket.ipynb
 
+<a id="5">[5]</a> 
+https://drive.google.com/drive/folders/13AlfWRNk9tRJ7OXJon5x_U--zioc9GVJ
 
 
