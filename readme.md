@@ -96,6 +96,11 @@ ec2-54-88-137-51.compute-1.amazonaws.com
 
 ![boto3 way from laptop to create a bucket](https://github.com/anindameister/cloudAWS/blob/main/snaps/8.PNG)
 
+###### AWS Tutorial - AWS SQS - Overview [[6]](#6).
+
+![amazon sqs](https://github.com/anindameister/cloudAWS/blob/main/snaps/10.PNG)
+
+
 ## References
 <a id="1">[1]</a> 
 https://youtu.be/tW3HoYRnABs
@@ -111,5 +116,8 @@ C:\aws\boto3WayFromLaptopToCreateAbucket.ipynb
 
 <a id="5">[5]</a> 
 https://drive.google.com/drive/folders/13AlfWRNk9tRJ7OXJon5x_U--zioc9GVJ
+
+<a id="6">[6]</a> 
+https://www.youtube.com/watch?v=_CsN94YlNjk
 
 
