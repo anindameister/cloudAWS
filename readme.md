@@ -1,3 +1,7 @@
+# saas,paas,iaas  [[3]](#3).
+
+![securityTeacher](https://github.com/anindameister/cloudAWS/blob/main/snaps/7.PNG)
+
 # What is an AMI ? 
 
 1. Amazon Machine Image (AMI)
@@ -74,13 +78,26 @@ ec2-54-88-137-51.compute-1.amazonaws.com
 
 ![pip install boto3](https://github.com/anindameister/cloudAWS/blob/main/snaps/6.PNG)
 
+###### s3
+
+- s3 is a simple storage service. S3 stores data and documents. it's like a storage device in your computer like a hdd.
+- then there are many buckets
+- buckets are like folders in the hdd
+- in the buckets, we put a lot of documents.
+- let's say that you have two types of docs: - images and pdfs. So we can create two buckets, one of which could containn all images and other one, all pdfs and non-image docs
+- you can also put all the docs in a simgle bucket as well, but for simplicity we can keep docs separately in regards to category
+- we can create bucket using the console, or cli, or boto3 python package
+
 
 ## References
 <a id="1">[1]</a> 
 https://youtu.be/tW3HoYRnABs
 
+<a id="2">[2]</a> 
+https://youtu.be/qsPZL-0OIJg
 
-
+<a id="3">[]</a> 
+file:///H:/security/clone/security/C2,WI-SSI-en.pdf
 
 
 
