@@ -96,10 +96,81 @@ ec2-54-88-137-51.compute-1.amazonaws.com
 
 ![boto3 way from laptop to create a bucket](https://github.com/anindameister/cloudAWS/blob/main/snaps/8.PNG)
 
-###### AWS Tutorial - AWS SQS - Overview [[6]](#6).
+# AWS Tutorial - AWS SQS - Overview [[6]](#6).
+
+####### sqs 
 
 ![amazon sqs](https://github.com/anindameister/cloudAWS/blob/main/snaps/10.PNG)
 
+####### standard queue
+
+![standard queue](https://github.com/anindameister/cloudAWS/blob/main/snaps/11.PNG)
+
+- default queue- the default queue that's created is standard queue
+- if a message is there in the queue, then it'd be delievered at-least once, could be more than once; but at-least once
+- A sender of an asynchronous message continues to execute after sending the message, [[7]](#7).
+- whereas a sender of a synchronous message waits until it receives a reply from the receiver that it has completed its processing of the message before continuing execution.
+- this standard queue option is to be chosen, in regards to asynchronousity 
+
+####### fifo queue
+
+- it has all the capabilities of a standard queue
+
+![fifo queue](https://github.com/anindameister/cloudAWS/blob/main/snaps/12.PNG)
+
+###### amazon sqs architecture [[8]](#8).
+
+![amazon sqs architecture](https://github.com/anindameister/cloudAWS/blob/main/snaps/13.PNG)
+
+![amazon sqs architecture](https://github.com/anindameister/cloudAWS/blob/main/snaps/15.PNG)
+
+######## What is Distributed Messaging System? [[9]](#9).
+- Distributed messaging is based on the concept of reliable message queuing. 
+- Messages are queued asynchronously between client applications and messaging systems. 
+- A distributed messaging system provides the benefits of reliability, scalability, and persistence.
+
+![Distributed Messaging System](https://github.com/anindameister/cloudAWS/blob/main/snaps/14.PNG)
+
+####### sqs message lifecycle
+
+![sqs message lifecycle](https://github.com/anindameister/cloudAWS/blob/main/snaps/16.PNG)
+
+![sqs message lifecycle](https://github.com/anindameister/cloudAWS/blob/main/snaps/17.PNG)
+
+####### what's message visibility timeout
+
+![message visibility timeout](https://github.com/anindameister/cloudAWS/blob/main/snaps/18.PNG)
+
+####### key points [[10]](#10).
+
+![message visibility timeout](https://github.com/anindameister/cloudAWS/blob/main/snaps/19.PNG)
+
+- https://console.aws.amazon.com/sqs/v2/home?region=us-east-1#/
+
+```
+myList=[]
+for j in range(1,50):
+  
+  myList.append('a'*j)
+
+myList[0]=0
+myList[1]=1
+
+response = queue.send_messages(Entries=[
+    {
+        'Id': '1',
+        'MessageBody': "No. 1 from Fibonacci series is "+myList[0]
+    },
+    {
+        'Id': '2',
+        'MessageBody': 'No. 2 from Fibonacci series is ',+myList[1]
+
+    },
+    for i in range(2,len(myList)):
+      myList[i]=myList[i-1]+myList[i-2]
+      {'Id': i+1,'MessageBody': "No. 1 from Fibonacci series is "+myList[i]}])
+
+```
 
 ## References
 <a id="1">[1]</a> 
@@ -120,4 +191,14 @@ https://drive.google.com/drive/folders/13AlfWRNk9tRJ7OXJon5x_U--zioc9GVJ
 <a id="6">[6]</a> 
 https://www.youtube.com/watch?v=_CsN94YlNjk
 
+<a id="7">[7]</a> 
+https://www.researchgate.net/publication/339124293_Difference_Between_Synchronous_and_Asynchronous_Messages_Synchronous_Messages#:~:text=A%20sender%20of%20an%20asynchronous,the%20message%20before%20continuing%20execution.
 
+<a id="8">[8]</a> 
+https://www.youtube.com/watch?v=K6Bao5WaPLU&list=PLrDJzKfz9AUvnUoCvwesGNaD55Wyljjzh&index=2&t=49s
+
+<a id="9">[9]</a> 
+https://www.tutorialspoint.com/apache_storm/apache_storm_distributed_messaging_system.htm#:~:text=What%20is%20Distributed%20Messaging%20System,reliability%2C%20scalability%2C%20and%20persistence.
+
+<a id="10">[10]</a> 
+https://www.youtube.com/watch?v=wDEnNFsPe0k&list=PLrDJzKfz9AUvnUoCvwesGNaD55Wyljjzh&index=3
